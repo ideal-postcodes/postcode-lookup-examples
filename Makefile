@@ -9,12 +9,12 @@ ci: test-install test-run
 ## npm install in test directory
 .PHONY: test-install
 test-install:
-	cd examples/$(DEMO) && npm install
+	cd $(DEMO) && npm install
 
 ## npm test in test directory
 .PHONY: test-run
 test-run:
-	cd examples/$(DEMO) && npm test
+	cd $(DEMO) && npm test
 
 ## Update repository against origin/master
 .PHONY: update
