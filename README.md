@@ -8,10 +8,10 @@ This repository contains examples of how to use Postcode Lookup with different J
 
 ## Example Setup
 
-[![Webpack Status](https://github.com/ideal-postcodes/postcode-lookup-examples/workflows/Webpack%20Demo/badge.svg)](examples/webpack/)
+[![Webpack Status](https://github.com/ideal-postcodes/postcode-lookup-examples/workflows/Webpack%20Demo/badge.svg)](https://github.com/ideal-postcodes/postcode-lookup-examples/tree/main/webpack)
 
-[![Parcel Status](https://github.com/ideal-postcodes/postcode-lookup-examples/workflows/Parcel%20Demo/badge.svg)](examples/parcel/)
+[![Parcel Status](https://github.com/ideal-postcodes/postcode-lookup-examples/workflows/Parcel%20Demo/badge.svg)](https://github.com/ideal-postcodes/postcode-lookup-examples/tree/main/parcel)
 
-[![Rollup Status](https://github.com/ideal-postcodes/postcode-lookup-examples/workflows/Rollup%20Demo/badge.svg)](examples/rollup/)
+[![Rollup Status](https://github.com/ideal-postcodes/postcode-lookup-examples/workflows/Rollup%20Demo/badge.svg)](https://github.com/ideal-postcodes/postcode-lookup-examples/tree/main/rollup)
 
 ![Postcode Lookup Demo](https://img.ideal-postcodes.co.uk/postcode-lookup.gif)
