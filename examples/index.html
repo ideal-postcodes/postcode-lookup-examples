@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ideal Postcodes Example</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://img.ideal-postcodes.co.uk/favicon.svg"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://img.ideal-postcodes.co.uk/favicon.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.0/milligram.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"
+      integrity="sha512-9GIHU4rPKUMvNOHFOer5Zm2zHnZOjayOO3lZpokhhCtgt8FNlNiW/bb7kl0R5ZXfCDVPcQ8S4oBdNs92p5Nm2w=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/javascript.min.js"
+      integrity="sha512-agBE6bi+jY5dVB39pN6OwVMxEyol/oZlTSqip7ZN2Y4jIUDJet5E1XTyTEGfCcYo7PXVwTJmYVLgOIRUatZ/lw=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css"
+    />
+    <script src="../postcode-lookup.js"></script>
+    <script>
+      window.onload = (event) => {
+        const tag = document.getElementById("demo");
+        const code = document.getElementById("code");
+        code.innerHTML = tag.text;
+        hljs.highlightBlock(code);
+      };
+    </script>
+  </head>
+  <body>
+    <div class="container" style="padding-top: 2em">
+      <div class="row">
+        <div class="column">
+          <h1>Postcode Lookup Demo</h1>
+          <p>Basic example</p>
+          <pre><code class="html" id="code">...</code></pre>
+        </div>
+        <div class="column">
+          <h1>&nbsp;</h1>
+          <h2>Address Form</h2>
+          <form>
+            <div id="postcode_lookup_field" class="form-group"></div>
+            <hr />
+            <label for="line_1">Address First Line</label>
+            <input type="text" id="line_1" />
+            <label for="line_2">Address Second Line</label>
+            <input type="text" id="line_2" />
+            <label for="line_3">Address Third Line</label>
+            <input type="text" id="line_3" />
+            <label for="post_town">Town or City</label>
+            <input type="text" id="post_town" />
+            <label for="postcode">Postcode</label>
+            <input type="text" id="postcode" />
+          </form>
+          <script>
+            if (window.idpcConfig) window.apiKey = window.idpcConfig.apiKey;
+          </script>
+          <script id="demo">
+            IdealPostcodes.PostcodeLookup.setup({
+              apiKey: window.apiKey || "iddqd",
+              context: "#postcode_lookup_field",
+              outputFields: {
+                line_1: "#line_1",
+                line_2: "#line_2",
+                line_3: "#line_3",
+                post_town: "#post_town",
+                postcode: "#postcode",
+              },
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
